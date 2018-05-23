@@ -1,5 +1,6 @@
 class Serie < ApplicationRecord
   include PgSearch
+  include Highlightable
   multisearchable against: [:title]
   belongs_to :category
   has_many :reviews, as: :reviewable
